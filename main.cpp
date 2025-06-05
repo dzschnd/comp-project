@@ -24,7 +24,7 @@ namespace yy {
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        std::cerr << "Usage: ./compiler <source.mc>" << std::endl;
+        std::cerr << "Usage: ./mycompiler <source.mc>" << std::endl;
         return 1;
     }
 
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    lexer.switch_streams(&in, nullptr); // set input
+    lexer.switch_streams(&in, nullptr); 
 
     yy::Parser parser;
     parser.parse();
